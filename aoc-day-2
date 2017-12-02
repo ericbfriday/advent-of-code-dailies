@@ -13,3 +13,14 @@ console.log([diff, quot].map(f => rows.reduce((sum, r) => sum + f(r), 0)));
 267
 */
 
+/** my solution
+
+let checksum = 0;
+const rows = document.body.textContent.trim().split('\n').map(line => line.split('\t').map(num => Number(num)));
+const differences = rows.map( r => {
+  const smallest = Math.min(...r);
+  const largest = Math.max(...r);
+  checksum += (largest - smallest);
+  return largest - smallest;
+});
+*/
